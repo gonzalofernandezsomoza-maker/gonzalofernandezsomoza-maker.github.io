@@ -1,6 +1,6 @@
 /* Booking calendar — Mon–Fri, 09:00–18:00 */
 (function () {
-  const BOOKING_EMAIL = 'fernandez.gonzalo@jmmgfsconsultores.com';
+  const BOOKING_EMAIL = 'fernandez.gonzalo@gfsjmmconsultores.com';
   const HOURS = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
   const MONTHS_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
   const DAYS_ES = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
