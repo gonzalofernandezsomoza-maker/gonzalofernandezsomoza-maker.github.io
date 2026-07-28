@@ -7,18 +7,10 @@
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
-
-    const captchaToken = typeof hcaptcha !== 'undefined' ? hcaptcha.getResponse() : '';
-    if (!captchaToken) {
-      alert('Por favor completá el captcha antes de enviar.');
-      return;
-    }
-
     btn.disabled = true;
     btn.textContent = 'Enviando…';
 
     const data = Object.fromEntries(new FormData(form));
-    data['h-captcha-response'] = captchaToken;
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -35,7 +27,6 @@
     } catch (err) {
       btn.disabled = false;
       btn.textContent = 'Enviar mensaje →';
-      if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
       alert('Hubo un error al enviar. Por favor intentá de nuevo o escribinos por WhatsApp.');
     }
   });
