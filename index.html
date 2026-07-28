@@ -491,6 +491,7 @@
         <input type="hidden" name="access_key" value="f116629d-7bd5-48ce-b28a-86ec5a387664">
         <input type="hidden" name="subject" value="Nueva consulta desde gfsjmmconsultores.com">
         <input type="hidden" name="from_name" value="Web JMMGFS">
+        <input type="text" name="website" id="cf-honeypot" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
         <div class="cf-row">
           <div class="cf-field">
             <label class="cf-label" for="cf-nombre">Nombre y apellido</label>
@@ -527,6 +528,10 @@
         <div class="cf-field">
           <label class="cf-label" for="cf-msg">Mensaje</label>
           <textarea class="cf-input cf-textarea" id="cf-msg" name="mensaje" placeholder="Contanos brevemente tu situación o consulta…" rows="5" required></textarea>
+        </div>
+        <div class="cf-field">
+          <label class="cf-label" for="cf-captcha-answer" id="cf-captcha-label">Verificación: ¿cuánto es __?</label>
+          <input class="cf-input" id="cf-captcha-answer" name="captcha_answer" type="text" inputmode="numeric" autocomplete="off" placeholder="Escribí el resultado" required>
         </div>
         <button type="submit" class="cf-submit" id="cf-submit-btn">Enviar mensaje →</button>
       </form>
